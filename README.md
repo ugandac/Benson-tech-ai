@@ -27,7 +27,7 @@
 <a href="https://api.whatsapp.com/send?phone=254114660061&text=Hello+N꙰i꙰c꙰k꙰༆"><img src="https://img.shields.io/badge/Contact 𝗡𝗜𝗖𝗞༆-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
 
 
-***This bot is created with the help of NodeJS and uses [Baileys](https://github.com/wiskeysockets/Baileys)***
+***This bot is created with the help of NodeJS and uses [Baileys](https://github.com/whiskeysockets/Baileys)***
 
 ## FEATURES
 This is a highly customisable simple whatsapp bot with group management features and few media commands and chatgpt courtesy of Gemini.
@@ -38,12 +38,12 @@ Our AI features use random APIs to run, so sometimes they may be down.
 
 Linking/Pairing:
 ## ` Pair onrender`
-[HERE](https://pairing-raven.onrender.com)
+[𝗛𝗘𝗥𝗘](https://pairing-raven.onrender.com)
             
     
 - Fork this repo by tapping  [𝗛𝗘𝗥𝗘](https://github.com/HunterNick2/RAVEN-BOT/fork) 
 
-###  𝐃𝐄𝐏𝐋𝐎𝐘 𝐎𝐍 𝐇𝐄𝐑𝐎𝐊𝐔:
+###  𝗗𝗘𝗣𝗟𝗢𝗬 𝗢𝗡 𝗛𝗘𝗥𝗢𝗞𝗨:
 
 
  ***[![Tap to deploy on heroku](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?button-url=https://github.com/HunterNick2/RAVEN-BOT&template=https://github.com/HunterNick2/RAVEN-BOT.git)***
