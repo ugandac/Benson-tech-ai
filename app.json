@@ -84,7 +84,7 @@
 },
  "CODE": {
       "description": "Input you country code here without +, it Will be used to Eliminate foreigners from the group once prompted.",
-      "required": false
+      "required": true
 },
  "SESSION": {
       "description": "Paste your Session id here, it is required during authenticationn.",
@@ -95,7 +95,7 @@
       "required": false
 },
  "APP_NAME": {
-      "description": "Input your app name that you put above.",
+      "description": "Input your app name that you put above, Must be in small letters.",
       "required": true
 },
  "STICKER_AUTHOR": {
