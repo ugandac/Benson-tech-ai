@@ -41,7 +41,7 @@ Linking/Pairing:
 [𝗛𝗘𝗥𝗘](https://pairing-raven.onrender.com)
             
     
-- Fork this repo by tapping  [𝗛𝗘𝗥𝗘](https://github.com/HunterNick2/RAVEN-BOT/fork) 
+- Fork this repo by tapping\n  [𝗛𝗘𝗥𝗘](https://github.com/HunterNick2/RAVEN-BOT/fork) 
 
 ###  𝗗𝗘𝗣𝗟𝗢𝗬 𝗢𝗡 𝗛𝗘𝗥𝗢𝗞𝗨:
 
@@ -51,7 +51,7 @@ Linking/Pairing:
 
     
 
-- Add the environmental variables in .env into your hosting site for bot to work.
+- Fill in the required variables into your hosting site for bot to work.
  </h2>
      
 
