@@ -83,13 +83,18 @@
       "required": false
 },
  "CODE": {
-      "description": "Input you country code here without +, it Will be used to Eliminate foreigners from the group once prompted.",
+      "description": "Input you country code here without + eg 254, it Will be used to Eliminate foreigners from the group once prompted.",
       "required": true
 },
  "SESSION": {
-      "description": "Paste your Session id here, it is required during authenticationn.",
+      "description": "Paste your Session id here, as it is required for authenticationn.",
       "required": true
 },
+ "MODE": {
+      "description": "Input PRIVATE if you don't want other people to use your bot",
+      "required": true
+    },
+    
  "AUTOBIO": {
       "description": "Input TRUE if you want bot to autoupdate its about with current time and date.",
       "required": false
