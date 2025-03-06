@@ -14,6 +14,7 @@ const prefix = process.env.PREFIX || '';
 const appname = process.env.APP_NAME || '';
 const herokuapi = process.env.HEROKU_API;
 const gptdm = process.env.GPT_INBOX || 'FALSE';
+const mode = process.env.MODE || 'PUBLIC';
 
 const botname = process.env.BOTNAME || '𝗥𝗔𝗩𝗘𝗡-𝗕𝗢𝗧';
 const antibot = process.env.ANTIBOT || 'FALSE';
@@ -26,10 +27,12 @@ const DevRaven = dev.split(",");
 const badwordkick = process.env.BAD_WORD_KICK || 'FALSE';
 const bad = process.env.BAD_WORD || 'fuck';
 const autoread = process.env.AUTOREAD || 'FALSE';
+
 const admin = process.env.ADMIN_MSG || '𝗖𝗼𝗺𝗺𝗮𝗻𝗱 𝗿𝗲𝘀𝗲𝗿𝘃𝗲𝗱 𝗳𝗼𝗿 𝗔𝗱𝗺𝗶𝗻𝘀!';
 const group = process.env.GROUP_ONLY_MSG || '𝗖𝗼𝗺𝗺𝗮𝗻𝗱 𝗺𝗲𝗮𝗻𝘁 𝗳𝗼𝗿 𝗚𝗿𝗼𝘂𝗽𝘀!';
 const botAdmin = process.env.BOT_ADMIN_MSG || '𝗜 𝗻𝗲𝗲𝗱 𝗔𝗱𝗺𝗶𝗻 𝗽𝗿𝗲𝘃𝗶𝗹𝗲𝗱𝗴𝗲𝘀!';
 const NotOwner = process.env.NOT_OWNER_MSG || '𝗖𝗼𝗺𝗺𝗮𝗻𝗱 𝗺𝗲𝗮𝗻𝘁 𝗳𝗼𝗿 𝘁𝗵𝗲 𝗼𝘄𝗻𝗲𝗿!';
+
 const wapresence = process.env.WA_PRESENCE || 'recording';
 const antilink = process.env.ANTILINK || 'TRUE';
 const mycode = process.env.CODE || '254';
@@ -45,6 +48,7 @@ module.exports = {
   DevRaven,
   badwordkick,
   bad,
+  mode,
   group,
   NotOwner,
   botname,
