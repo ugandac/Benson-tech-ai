@@ -4,7 +4,7 @@
   "keywords": [
     "bot",
     "whatsapp",
-    "dreaded",
+    "raven",
     "whatsapp-stickers",
     "anime",
     "whatsapp-bot",
@@ -84,6 +84,7 @@
 },
  "CODE": {
       "description": "Input you country code here without + eg 254, it Will be used to Eliminate foreigners from the group once prompted.",
+      "value": "254",
       "required": true
 },
  "SESSION": {
