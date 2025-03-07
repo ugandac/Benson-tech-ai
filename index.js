@@ -1,5 +1,4 @@
-
-const { sessionName, session, autobio, autolike, owner, packname, autoviewstatus, welcome } = require("./set.js");
+/* Don't forget to say hi to your partner */
 const {
   default: ravenConnect,
   useMultiFileAuthState,
@@ -24,7 +23,7 @@ const _ = require("lodash");
 const PhoneNumber = require("awesome-phonenumber");
 const { imageToWebp, videoToWebp, writeExifImg, writeExifVid } = require('./lib/ravenexif');
 const { smsg, isUrl, generateMessageTag, getBuffer, getSizeMedia, fetchJson, await, sleep } = require('./lib/ravenfunc');
-
+const { sessionName, session, autobio, autolike, owner, packname, autoviewstatus, welcome } = require("./set.js");
 const store = makeInMemoryStore({ logger: pino().child({ level: "silent", stream: "store" }) });
 const color = (text, color) => {
   return !color ? chalk.green(text) : chalk.keyword(color)(text);
@@ -32,8 +31,7 @@ const color = (text, color) => {
 
 async function authenticationn() {
   try {
-    const credsPath = "./session/creds.json";
-    
+    const credsPath = "./session/creds.json";  
     // Check if session file exists
     if (!fs.existsSync(credsPath)) {
       console.log("Connecting...");
@@ -50,8 +48,7 @@ async function authenticationn() {
 }
 
 async function startRaven() {
-                 await authenticationn();
-  
+                 await authenticationn();  
   const { state, saveCreds } = await useMultiFileAuthState("session");
   const { version, isLatest } = await fetchLatestBaileysVersion();
   console.log(`using WA v${version.join(".")}, isLatest: ${isLatest}`);
@@ -202,7 +199,7 @@ async function startRaven() {
         console.log("Connection Replaced, Another New Session Opened, Please Restart Bot");
         process.exit();
       } else if (reason === DisconnectReason.loggedOut) {
-        console.log(`Device Logged Out, Please Delete File creds.json and Scan Again.`);
+        console.log(`Device Logged Out, Please Delete Session_id and Scan Again.`);
         process.exit();
       } else if (reason === DisconnectReason.restartRequired) {
         console.log("Restart Required, Restarting...");
@@ -219,13 +216,12 @@ async function startRaven() {
       console.log(color("Congrats, RAVEN-BOT has successfully connected to this server", "green"));
       console.log(color("Follow me on Instagram as Nick_hunter9", "red"));
       console.log(color("Text the bot number with menu to check my command list"));
-      client.sendMessage(client.user.id, { text: `𝗕𝗼𝘁 𝗵𝗮𝘀 𝗦𝘁𝗮𝗿𝘁𝗲𝗱 » » »【𝗥𝗔𝗩𝗘𝗡-𝗕𝗢𝗧】` });
+      client.sendMessage(client.user.id, { text: `𝗕𝗼𝘁 𝗵𝗮𝘀 𝗦𝘁𝗮𝗿𝘁𝗲𝗱 » » »【𝗥𝗔𝗩𝗘𝗡-𝗕𝗢𝗧\n𝗜𝗳 𝗕𝗢𝗧 𝗗𝗼𝗲𝘀𝗻'𝘁 𝗥𝗲𝘀𝗽𝗼𝗻𝗱\n𝗣𝗹𝗲𝗮𝘀𝗲 𝗥𝗲𝗽𝗹𝗮𝗰𝗲 𝗬𝗼𝘂𝗿 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 ` });
     }
   });
 
   client.ev.on("creds.update", saveCreds);
-
-  const getBuffer = async (url, options) => {
+ const getBuffer = async (url, options) => {
     try {
       options ? options : {};
       const res = await axios({
