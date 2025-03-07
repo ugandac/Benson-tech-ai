@@ -1,4 +1,4 @@
-/* Bot settings 
+/* if you're using pannel carefully edit this part
 
 There's no need to configure this if you're deploying via Heroku — just set them in the environment variables. And don't forget to rest, for even the relentless must recharge.*/
 
