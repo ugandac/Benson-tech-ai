@@ -219,7 +219,7 @@ async function startRaven() {
       console.log(color("Congrats, RAVEN-BOT has successfully connected to this server", "green"));
       console.log(color("Follow me on Instagram as Nick_hunter9", "red"));
       console.log(color("Text the bot number with menu to check my command list"));
-      client.sendMessage(client.user.id, { text: `𝗕𝗼𝘁 𝗵𝗮𝘀 𝗦𝘁𝗮𝗿𝘁𝗲𝗱 » » »【𝗥𝗔𝗩𝗘𝗡-𝗕𝗢𝗧】\n\n𝗜𝗳 𝗕𝗢𝗧 𝗗𝗼𝗲𝘀𝗻'𝘁 𝗥𝗲𝘀𝗽𝗼𝗻𝗱\n\n𝗣𝗹𝗲𝗮𝘀𝗲 𝗥𝗲𝗽𝗹𝗮𝗰𝗲 𝗬𝗼𝘂𝗿 𝗦𝗲𝘀𝘀𝗶𝗼𝗻 ` });
+      client.sendMessage(client.user.id, { text: `𝗕𝗼𝘁 𝗵𝗮𝘀 𝗦𝘁𝗮𝗿𝘁𝗲𝗱 » » »【𝗥𝗔𝗩𝗘𝗡-𝗕𝗢𝗧】 ` });
     }
   });
 
