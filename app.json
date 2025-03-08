@@ -20,7 +20,7 @@
   "success_url": "/",
   "env": {
     "PREFIX": {
-      "description": "Prefix of RAVEN MD Ex: . , / , # , & etc. Put any symbol or leave it blank",
+      "description": "Prefix of RAVEN-BOT Ex: . , / , # , & etc. Put any symbol or leave it blank",
       "required": false
 
     },
@@ -63,11 +63,11 @@
       "required": true
 },
  "AUTOVIEW": {
-      "description": "Input true if you want bot to automatically read status update",
+      "description": "Input TRUE if you want bot to automatically read status update",
       "required": true
 },
  "WA_PRESENCE": {
-      "description": "Input either recording or typing. This enables bot to simulate typing or recording.",
+      "description": "Input either recording, typing, online, or leave it blank. This enables bot to simulate typing or recording or online status even if you're not online.",
       "required": true
 },
  "ANTILINK": {
