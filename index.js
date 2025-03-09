@@ -18,6 +18,7 @@ const pino = require("pino");
 const { Boom } = require("@hapi/boom");
 const fs = require("fs");
 const axios = require("axios");
+const express = require("express");
 const chalk = require("chalk");
 const FileType = require("file-type");
 const figlet = require("figlet");
@@ -26,11 +27,13 @@ const _ = require("lodash");
 const PhoneNumber = require("awesome-phonenumber");
 const { imageToWebp, videoToWebp, writeExifImg, writeExifVid } = require('./lib/ravenexif');
 const { smsg, isUrl, generateMessageTag, getBuffer, getSizeMedia, fetchJson, await, sleep } = require('./lib/ravenfunc');
-const { sessionName, session, autobio, autolike, owner, packname, autoviewstatus, welcome } = require("./set.js");
+const { sessionName, session, autobio, autolike, owner, port, packname, autoviewstatus, welcome } = require("./set.js");
 const store = makeInMemoryStore({ logger: pino().child({ level: "silent", stream: "store" }) });
 const color = (text, color) => {
   return !color ? chalk.green(text) : chalk.keyword(color)(text);
 };
+
+const app = express();
 
 async function authenticationn() {
   try {
@@ -360,6 +363,10 @@ async function startRaven() {
 
   return client;
 }
+
+app.use(express.static("pixel"));
+app.get("/", (req, res) => res.sendFile(__dirname + "/index.html"));
+app.listen(port, () => console.log(`Server listening on port http://localhost:${port}`));
 
 startRaven();
 
