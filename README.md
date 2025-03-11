@@ -4,7 +4,8 @@
   </p>
   
 <p align="center">
-<img src="https://telegra.ph/file/416c3ae0cfe59be8db011.jpg" width="300" height="300"/>
+
+[![Nick Hunter](https://github.com/HunterNick2.png?lenght=50width=50)](https://github.com/HunterNick2)
 </p>
 <p align="center">
   <a href="#"><img src="http://readme-typing-svg.herokuapp.com?color=d1fa02&center=true&vCenter=true&multiline=false&lines=RAVEN+WHATSAPP+BOT" alt="">
@@ -30,7 +31,7 @@
 ***This bot is created with the help of NodeJS and uses [Baileys](https://github.com/whiskeysockets/Baileys)***
 
 ## FEATURES
-This is a highly customisable simple whatsapp bot with group management features and few media commands and chatgpt courtesy of Gemini.
+This is a highly customisable simple whatsapp bot with group management features and few media commands and chatgpt courtesy of Openai.
 
 Our AI features use random APIs to run, so sometimes they may be down.
 
@@ -38,13 +39,13 @@ Our AI features use random APIs to run, so sometimes they may be down.
 
 ## ` Fork this repo`
 <p align="centre">
-<a href="https://github.com/HunterNick2/RAVEN-BOT/fork"><img src="https://img.shields.io/badge/Fork%20Create-purple?style=for-the-badge&logo=github" alt="FORK RAVEN-BOT" width="170"></a>
+<a href="https://github.com/HunterNick2/RAVEN-BOT/fork"><img src="https://img.shields.io/badge/Fork%20Create-purple?style=for-the-badge&logo=github" alt="FORK RAVEN-BOT" width="160"></a>
 <p/>
   
 Linking/Pairing:
 ## ` Pair onrender`
 <p align="centre">
-<a href="https://pairing-raven.onrender.com"><img height= "40" title="Author" src="https://img.shields.io/badge/Session-green?style=for-the-badge&logo=render"></a>
+<a href="https://pairing-raven.onrender.com"><img height= "37" title="Author" src="https://img.shields.io/badge/Session-green?style=for-the-badge&logo=render"></a>
 <p/>
             
 
