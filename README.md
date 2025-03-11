@@ -36,16 +36,17 @@ Our AI features use random APIs to run, so sometimes they may be down.
 
 # SET-UP
 
+## ` Fork this repo`
+<p align="centre">
+<a href="https://github.com/HunterNick2/RAVEN-BOT/fork"><img src="https://img.shields.io/badge/Fork%20Create-purple?style=for-the-badge&logo=github" alt="FORK RAVEN-BOT" width="170"></a>
+<p/>
+  
 Linking/Pairing:
 ## ` Pair onrender`
 <p align="centre">
 <a href="https://pairing-raven.onrender.com"><img height= "40" title="Author" src="https://img.shields.io/badge/Session-green?style=for-the-badge&logo=render"></a>
 <p/>
             
-    
-- Fork this repo by tapping
-
-  [𝗛𝗘𝗥𝗘](https://github.com/HunterNick2/RAVEN-BOT/fork) 
 
 ###  𝗗𝗘𝗣𝗟𝗢𝗬 𝗢𝗡 𝗛𝗘𝗥𝗢𝗞𝗨:
 
