@@ -1,6 +1,6 @@
 /* I don't know what's this..!
 
-        and Don't forget to say hi to your partner. */
+        and don't forget to say hi to your partner. */
 
 const {
   default: ravenConnect,
@@ -27,13 +27,14 @@ const _ = require("lodash");
 const PhoneNumber = require("awesome-phonenumber");
 const { imageToWebp, videoToWebp, writeExifImg, writeExifVid } = require('./lib/ravenexif');
 const { smsg, isUrl, generateMessageTag, getBuffer, getSizeMedia, fetchJson, await, sleep } = require('./lib/ravenfunc');
-const { sessionName, session, autobio, autolike, owner, port, packname, autoviewstatus, welcome } = require("./set.js");
+const { sessionName, session, autobio, autolike, port, packname, autoviewstatus } = require("./set.js");
 const store = makeInMemoryStore({ logger: pino().child({ level: "silent", stream: "store" }) });
 const color = (text, color) => {
   return !color ? chalk.green(text) : chalk.keyword(color)(text);
 };
 
 const app = express();
+const event = require('./action/events');
 
 async function authenticationn() {
   try {
@@ -60,7 +61,7 @@ async function startRaven() {
   console.log(`using WA v${version.join(".")}, isLatest: ${isLatest}`);
   console.log(
     color(
-      figlet.textSync("RAVEN-AI", {
+      figlet.textSync("RAVEN", {
         font: "Standard",
         horizontalLayout: "default",
         vertivalLayout: "default",
@@ -94,14 +95,14 @@ async function startRaven() {
       let mek = chatUpdate.messages[0];
       if (!mek.message) return;
       mek.message = Object.keys(mek.message)[0] === "ephemeralMessage" ? mek.message.ephemeralMessage.message : mek.message;
-
-      if (autoviewstatus === 'TRUE' && autolike === 'TRUE' && mek.key && mek.key.remoteJid === "status@broadcast") {
-        const nickk = await client.decodeJid(client.user.id);
-        await client.sendMessage(mek.key.remoteJid, { react: { key: mek.key, text: '🎭' } }, { statusJidList: [mek.key.participant, nickk] });
-      }
-
+            
       if (autoviewstatus === 'TRUE' && mek.key && mek.key.remoteJid === "status@broadcast") {
         client.readMessages([mek.key]);
+      }
+            
+      if (autolike === 'TRUE' && mek.key && mek.key.remoteJid === "status@broadcast") {
+        const nickk = await client.decodeJid(client.user.id);
+        await client.sendMessage(mek.key.remoteJid, { react: { key: mek.key, text: '🎭' } }, { statusJidList: [mek.key.participant, nickk] });
       }
 
       if (!client.public && !mek.key.fromMe && chatUpdate.type === "notify") return;
@@ -142,6 +143,9 @@ async function startRaven() {
       if (store && store.contacts) store.contacts[id] = { id, name: contact.notify };
     }
   });
+
+  client.ev.on("group-participants.update", 
+                 (m) => event(client, m));    
 
   client.getName = (jid, withoutContact = false) => {
     let id = client.decodeJid(jid);
