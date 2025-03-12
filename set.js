@@ -7,8 +7,7 @@ const session = process.env.SESSION || '';
 const autobio = process.env.AUTOBIO || 'FALSE';
 const autolike = process.env.AUTOLIKE_STATUS || 'TRUE';
 const autoviewstatus = process.env.AUTOVIEW_STATUS || 'TRUE';
-const welcome = process.env.WELCOME || 'FALSE';
-const owner = process.env.DEV || '254114660061'; 
+const welcomegoodbye = process.env.WELCOMEGOODBYE || 'FALSE';
 
 const prefix = process.env.PREFIX || '';
 const appname = process.env.APP_NAME || '';
@@ -61,11 +60,10 @@ module.exports = {
   mycode,
   antilinkall,
   wapresence,
-  welcome,
+  welcomegoodbye,
   antibot,
   herokuapi,
   prefix,
-  owner,
   port,
   gptdm,
   appname,
