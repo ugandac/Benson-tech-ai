@@ -1,5 +1,4 @@
 /* I don't know what's this..!
-
         and don't forget to say hi to your partner. */
 
 const {
@@ -23,7 +22,10 @@ const chalk = require("chalk");
 const FileType = require("file-type");
 const figlet = require("figlet");
 
+const app = express();
 const _ = require("lodash");
+const event = require('./action/events');
+const authenticationn = require('./action/auth');
 const PhoneNumber = require("awesome-phonenumber");
 const { imageToWebp, videoToWebp, writeExifImg, writeExifVid } = require('./lib/ravenexif');
 const { smsg, isUrl, generateMessageTag, getBuffer, getSizeMedia, fetchJson, await, sleep } = require('./lib/ravenfunc');
@@ -33,27 +35,6 @@ const color = (text, color) => {
   return !color ? chalk.green(text) : chalk.keyword(color)(text);
 };
 
-const app = express();
-const event = require('./action/events');
-
-async function authenticationn() {
-  try {
-    const credsPath = "./session/creds.json";  
-    // Check if session file exists
-    if (!fs.existsSync(credsPath)) {
-      console.log("Connecting...");
-      await fs.writeFileSync(credsPath, atob(session), "utf8");
-    } 
-    // If session is not "zokk", update session file
-    else if (session !== "zokk") {
-      await fs.writeFileSync(credsPath, atob(session), "utf8");
-    }
-  } catch (error) {
-    console.log("Session is invalid: " + error);
-    return;
-  }
-}
-  
 async function startRaven() {
                  await authenticationn();  
   const { state, saveCreds } = await useMultiFileAuthState("session");
