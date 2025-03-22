@@ -1,5 +1,4 @@
-/* I don't know what's this..!
-        and don't forget to say hi to your partner. */
+/* If it works, don't  Fix it */
 
 const {
   default: ravenConnect,
