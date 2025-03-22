@@ -16,6 +16,7 @@ const {
 const pino = require("pino");
 const { Boom } = require("@hapi/boom");
 const fs = require("fs");
+const path = require('path');
 const axios = require("axios");
 const express = require("express");
 const chalk = require("chalk");
@@ -24,12 +25,14 @@ const figlet = require("figlet");
 
 const app = express();
 const _ = require("lodash");
+let lastTextTime = 0;
+const messageDelay = 5000;
 const event = require('./action/events');
 const authenticationn = require('./action/auth');
 const PhoneNumber = require("awesome-phonenumber");
 const { imageToWebp, videoToWebp, writeExifImg, writeExifVid } = require('./lib/ravenexif');
 const { smsg, isUrl, generateMessageTag, getBuffer, getSizeMedia, fetchJson, await, sleep } = require('./lib/ravenfunc');
-const { sessionName, session, autobio, autolike, port, packname, autoviewstatus } = require("./set.js");
+const { sessionName, session, autobio, autolike, port, mycode, anticall, antiforeign, packname, autoviewstatus } = require("./set.js");
 const store = makeInMemoryStore({ logger: pino().child({ level: "silent", stream: "store" }) });
 const color = (text, color) => {
   return !color ? chalk.green(text) : chalk.keyword(color)(text);
@@ -42,7 +45,7 @@ async function startRaven() {
   console.log(`using WA v${version.join(".")}, isLatest: ${isLatest}`);
   console.log(
     color(
-      figlet.textSync("RAVEN", {
+      figlet.textSync("RAVEN-BOT", {
         font: "Standard",
         horizontalLayout: "default",
         vertivalLayout: "default",
@@ -82,12 +85,16 @@ async function startRaven() {
       }
             
       if (autolike === 'TRUE' && mek.key && mek.key.remoteJid === "status@broadcast") {
-        const nickk = await client.decodeJid(client.user.id);
+    const nickk = await client.decodeJid(client.user.id);
+    console.log('Decoded JID:', nickk);
+    if (!mek.status) {
+        console.log('Sending reaction to:', mek.key.remoteJid);
         await client.sendMessage(mek.key.remoteJid, { react: { key: mek.key, text: '🎭' } }, { statusJidList: [mek.key.participant, nickk] });
-      }
-
-      if (!client.public && !mek.key.fromMe && chatUpdate.type === "notify") return;
-
+        console.log('Reaction sent');
+    }
+}
+            
+if (!client.public && !mek.key.fromMe && chatUpdate.type === "notify") return;
       let m = smsg(client, mek, store);
       const raven = require("./raven");
       raven(client, m, chatUpdate, store);
@@ -125,9 +132,44 @@ async function startRaven() {
     }
   });
 
-  client.ev.on("group-participants.update", 
-                 (m) => event(client, m));    
+  client.ev.on("group-participants.update", async (update) => {
+        if (antiforeign === 'TRUE' && update.action === "add") {
+            for (let participant of update.participants) {
+                const jid = client.decodeJid(participant);
+                const phoneNumber = jid.split("@")[0];
+                    // Extract phone number
+                if (!phoneNumber.startsWith(mycode)) {
+                        await client.sendMessage(update.id, {
+                    text: "Your Country code is not allowed to join this group !",
+                    mentions: [jid]
+                });
+                    await client.groupParticipantsUpdate(update.id, [jid], "remove");
+                    console.log(`Removed ${jid} from group ${update.id} because they are not from ${mycode}`);
+                }
+            }
+        }
+        event(client, update); // Call existing event handler
+    });
 
+ client.ev.on('call', async (callData) => {
+    if (anticall === 'TRUE') {
+      const callId = callData[0].id;
+      const callerId = callData[0].from;
+
+      await client.rejectCall(callId, callerId);
+            const currentTime = Date.now();
+      if (currentTime - lastTextTime >= messageDelay) {
+        await client.sendMessage(callerId, {
+          text: "Anticall is active, Only texts are allowed"
+        });
+        lastTextTime = currentTime;
+      } else {
+        console.log('Message skipped to prevent overflow');
+      }
+    }
+    });
+
+        
   client.getName = (jid, withoutContact = false) => {
     let id = client.decodeJid(jid);
     withoutContact = client.withoutContact || withoutContact;
