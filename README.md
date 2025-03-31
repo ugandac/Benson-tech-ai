@@ -7,7 +7,7 @@
   </p>
 <img src="https://i.imgur.com/dBaSKWF.gif" height="90" width="100%">
 
-***[GROUP](https://chat.whatsapp.com/IIpL6gf6dcq4ial8gaJLE9)***
+***[GROUP](https://chat.whatsapp.com/I5xIShFtrk43tfaWEmppNH)***
 
 
 ------------------------------------------
@@ -16,14 +16,9 @@
 
 
 
-<a href="https://wa-session-1.onrender.com/" target="_blank"><img alt='PAIRING' src='https://img.shields.io/badge/PAIRING CODE-magenta?style=for-the-badge&logo=opencv&logoColor=white'/></a>
+<a href="https://music-pair-glim.onrender.com/pair" target="_blank"><img alt='PAIRING' src='https://img.shields.io/badge/PAIRING CODE-magenta?style=for-the-badge&logo=opencv&logoColor=white'/></a>
 
 
-
-**contact with me**
-
-
-<a href="https://wa.link/kho6x6"><img alt='OWNER' src='https://img.shields.io/badge/GET IN TOUCH-magenta?style=for-the-badge&logo=opencv&logoColor=white'/></a>
 
 
 -------------------------
