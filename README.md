@@ -36,7 +36,7 @@
 
 ---------------------
 
-*****DEPLOYMENT SITE👇*****
+*****NOW DEPLOY*****
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Gmaxhacker1/GCYBER-BOT)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/ugandac/Benson-tech-ai)
   
