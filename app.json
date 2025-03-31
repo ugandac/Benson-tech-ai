@@ -1,6 +1,6 @@
 {
-  "name": "RAVEN-BOT",
-  "description": "I don't know what I'm doing",
+  "name": "📛 BENSON-TECHNLOGY 📛",
+  "description": "BELIVE IN CHANGE",
   "keywords": [
     "bot",
     "whatsapp",
@@ -14,13 +14,13 @@
     "baileys-md",
     "md-bot"
   ],
-  "website": "https://github.com/HunterNick2/RAVEN-BOT#readme",
-  "repository": "https://github.com/HunterNick2/RAVEN-BOT.git",
-  "logo": "https://telegra.ph/file/eebe191a0520a79979b34.jpg",
+  "website": "https://github.com/ugandac/Benson-tech-ai#readme",
+  "repository": "https://github.com/ugandac/Benson-tech-ai.git",
+  "logo": "https://i.imgur.com/xFmW8er.jpeg",
   "success_url": "/",
   "env": {
     "PREFIX": {
-      "description": "Prefix of RAVEN-BOT Ex: . , / , # , & etc. Put any symbol or leave it blank",
+      "description": "Prefix of BENSON-TECHNLOGY Ex: . , / , # , & etc. Put any symbol or leave it blank",
       "required": false
 
     },
@@ -30,12 +30,14 @@
     },
     "ANTIDELETE": {
       "description": "Input TRUE if you want bot to foward back deleted messages. The messages will be fowarded to your Pm, Message yourself.",
+      "value": "TRUE",
       "required": false
     },
     
     
     "AUTOREJECT_CALL": {
       "description": "Put TRUE if you want bot to decline all incoming calls",
+      "value": "FALSE",
       "required": false
     },
     "ANTIFOREIGN": {
@@ -48,18 +50,22 @@
     },
     "BAD_WORD": {
       "description": "List words separated witj commas that will be considered as bad and will trigger bot to kick. Example: fuck, pussy, hoe",
+      "value": "FALSE",
       "required": false
     },
     "BAD_WORD_KICK": {
       "description": "Put here TRUE if you want the bot to automatically kick group members using words that you have listed as bad",
+      "value": "FALSE",
       "required": false
     },
     "ANTITAG": {
       "description": "Put TRUE if you want bot kick out unnecessary tags from a group, Not sure if its working eh!",
+      "value": "FALSE",
       "required": false
     },
       "AUTOREAD": {
       "description": "Put here TRUE if you want bot to automatically bluetick messages in private chats",
+      "value": "FALSE",
       "required": true
 },
  "AUTOVIEW": {
@@ -68,6 +74,7 @@
 },
  "WA_PRESENCE": {
       "description": "Input either recording, typing, online, or leave it blank. This enables bot to simulate typing or recording or online status even if you're not online.",
+      "value": "RECORDING",
       "required": true
 },
  "WELCOMEGOODBYE": {
@@ -78,14 +85,17 @@
    
  "ANTILINK": {
       "description": "Input TRUE if you want bot to kick link senders",
+      "value": "TRUE",
       "required": true
 },
  "ANTILINK_ALL": {
       "description": "Input TRUE if you want bot to kick users sending any links.",
+      "value": "TRUE",
       "required": true
 },
  "ANTIBOT": {
       "description": "Input TRUE if you want bot to kick other bots from group",
+      "value": "TRUE",
       "required": false
 },
  "CODE": {
@@ -120,6 +130,7 @@
 },
  "GPT_INBOX": {
       "description": "Input TRUE if you want bot to autoreply inbox messages using openai API. For now not stable may cause spam!",
+      "value": "FALSE",
       "required": false
 },
  "MENU_TYPE": {
@@ -131,6 +142,7 @@
     },
     "AUTOLIKE_STATUS": {
       "description": "input TRUE if you want bot to autolike status updates. This will only work if autostatus view is TRUE",
+      "value": "FALSE",
       "required": false
     }
   },
