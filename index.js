@@ -44,7 +44,7 @@ async function startRaven() {
   console.log(`using WA v${version.join(".")}, isLatest: ${isLatest}`);
   console.log(
     color(
-      figlet.textSync("RAVEN-BOT", {
+      figlet.textSync("BENSON-TECH", {
         font: "Standard",
         horizontalLayout: "default",
         vertivalLayout: "default",
@@ -57,7 +57,7 @@ async function startRaven() {
   const client = ravenConnect({
     logger: pino({ level: "silent" }),
     printQRInTerminal: true,
-    browser: ["RAVEN - AI", "Safari", "5.1.7"],
+    browser: ["BENSON - AI", "Safari", "5.1.7"],
     auth: state,
     syncFullHistory: true,
   });
