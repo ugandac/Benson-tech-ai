@@ -16,12 +16,12 @@ const gptdm = process.env.GPT_INBOX || 'FALSE';
 const mode = process.env.MODE || 'PUBLIC';
 const anticall = process.env.AUTOREJECT_CALL || 'TRUE';
 
-const botname = process.env.BOTNAME || '𝗥𝗔𝗩𝗘𝗡-𝗕𝗢𝗧';
+const botname = process.env.BOTNAME || 'BENSON-𝗕𝗢𝗧';
 const antibot = process.env.ANTIBOT || 'FALSE';
 const author = process.env.STICKER_AUTHOR ||'𝗕𝗢𝗧';
-const packname = process.env.STICKER_PACKNAME || '𝗥𝗔𝗩𝗘𝗡';
+const packname = process.env.STICKER_PACKNAME || 'BENSON-TECH';
 const antitag = process.env.ANTITAG || 'TRUE';
-const dev = process.env.DEV || '254114660061';
+const dev = process.env.DEV || '254702713600';
 
 const menu = process.env.MENU_TYPE || 'VIDEO';
 const DevRaven = dev.split(",");
@@ -37,7 +37,7 @@ const NotOwner = process.env.NOT_OWNER_MSG || '𝗖𝗼𝗺𝗺𝗮𝗻𝗱 𝗺
 
 const wapresence = process.env.WA_PRESENCE || 'recording';
 const antilink = process.env.ANTILINK || 'TRUE';
-const mycode = process.env.CODE || '254';
+const mycode = process.env.CODE || '255';
 const antiforeign = process.env.ANTIFOREIGN || 'TRUE';
 const port = process.env.PORT || 10000;
 const antilinkall = process.env.ANTILINK_ALL || 'TRUE';
