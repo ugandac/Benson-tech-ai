@@ -40,32 +40,3 @@
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Gmaxhacker1/GCYBER-BOT)
   
-<a href='https://replit.com/~' target="_blank"><img alt='Deploy Replit' src='https://img.shields.io/badge/DEPLOY REPLIT-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=black&color=black'/></a>
-
-----------------------
-
-***[TUTORIAL HOW TO DEPLOY](https://vm.tiktok.com/ZMrEaehwD/)***
-
-----------------------
-
-****MAIN DEV EDITOR****
-
- [![Gmaxhacker1](https://github.com/Gmaxhacker1.png?size=100)](https://github.com/Gmaxhacker1)
- [![Lazack28](https://github.com/Lazack28.png?size=100)](https://github.com/Lazack28)
- 
-
-----------------------
-
-<h2 align="center">  NOTICE
-</h2>
-   
- 
--*cyber bots Tupo hapa kukusaidia Endapo utapata changomoto yeyote unaweza kuwasiliana nasi ili`*
-- *Ninaweza kukusaidia katika uwekaji wa roboti na uhariri wa msimbo wa roboti ikiwa nitapata muda wa kufanya hivyo*
-
-
-
-
-
-         CREDIT TO Mr Gmax & Lazack28
-         
