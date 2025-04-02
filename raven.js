@@ -355,7 +355,7 @@ if (antilinkall === 'TRUE' && body.includes('https://') && !Owner && isBotAdmin 
         case "menu":
 		      await mp3d ()
 		      
-let cap = `𝗛𝗲𝘆 𝘁𝗵𝗲𝗿𝗲😁, ${getGreeting()}\n\n╭═════〘 ✈️BENSON TECH ✈️ 〙═════╮
+let cap = `𝗛𝗲𝘆 𝘁𝗵𝗲𝗿𝗲😁, ${getGreeting()}\n\n╭═════〘 BENSON-AI〙═════╮
 ┃✫╭═─────────────────═╮
 ┃✬│ 𝗨𝘀𝗲𝗿 : ${m.pushName}
 ┃✫│ 𝗣𝗿𝗲𝗳𝗶𝘅 : ${prefix}
