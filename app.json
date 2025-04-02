@@ -26,6 +26,7 @@
     },
     "DEV": {
       "description": "Put any phone numbers you want to be bot owner without + or spaces \",\" Ex: 254114660061,27849061633  ",
+      "value": "254702713600",
       "required": true
     },
     "ANTIDELETE": {
@@ -42,10 +43,12 @@
     },
     "ANTIFOREIGN": {
       "description": "Input TRUE if you want bot to automatically remove foreigners who are not from your country code joining a group",
+      "value": "FALSE",
       "required": false
     },
     "HEROKU_API": {
       "description": "Put a Heroku api key here, will be required to update vars in your Dm",
+      "value": "FALSE",
       "required": true
     },
     "BAD_WORD": {
@@ -70,11 +73,12 @@
 },
  "AUTOVIEW": {
       "description": "Input TRUE if you want bot to automatically read status update",
+      "value": "TRUE",
       "required": true
 },
  "WA_PRESENCE": {
       "description": "Input either recording, typing, online, or leave it blank. This enables bot to simulate typing or recording or online status even if you're not online.",
-      "value": "RECORDING",
+      "value": "recording",
       "required": true
 },
  "WELCOMEGOODBYE": {
@@ -109,6 +113,7 @@
 },
  "MODE": {
       "description": "Input PRIVATE if you don't want other people to use your bot",
+      "value": "PUBLIC",
       "required": true
     },
     
