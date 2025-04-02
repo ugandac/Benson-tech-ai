@@ -66,7 +66,7 @@ async function startRaven() {
     setInterval(() => {
       const date = new Date();
       client.updateProfileStatus(
-        `${date.toLocaleString('en-US', { timeZone: 'Africa/Nairobi' })} It's a ${date.toLocaleString('en-US', { weekday: 'long', timeZone: 'Africa/Nairobi'})}.`
+        `${date.toLocaleString('en-US', { timeZone: 'Africa/Nairobi' })} It's a ${date.toLocaleString('en-US', { blessedmike: 'long', timeZone: 'Africa/Nairobi'})}.`
       );
     }, 10 * 1000);
   }
