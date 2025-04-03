@@ -33,5 +33,5 @@
 
 *****NOW DEPLOY*****
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/ugandac/Benson-tech-ai)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?button-url=https://github.com/Kingdragony/DRAGON-AI&template=https://github.com/ugandac/Benson-tech-ai.git)
   
