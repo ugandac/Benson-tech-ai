@@ -123,7 +123,8 @@
 },
  "APP_NAME": {
       "description": "Input your app name that you put above, Must be in small letters.",
-      "required": true
+     "value": "BENSON-TECH",
+     "required": true
 },
  "STICKER_AUTHOR": {
       "description": "Input sticker data for author",
@@ -140,6 +141,7 @@
 },
  "MENU_TYPE": {
       "description": "Input either VIDEO, LINK or IMAGE. This will allow bot to display different dynamic menu types",
+      "value": "IMAGE",
       "required": false
 
     
