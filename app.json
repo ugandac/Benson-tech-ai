@@ -26,7 +26,7 @@
     },
     "DEV": {
       "description": "Put any phone numbers you want to be bot owner without + or spaces \",\" Ex: 254114660061,27849061633  ",
-      "value": "254702713600",
+      "value": "255 766 793 224",
       "required": true
     },
     "ANTIDELETE": {
@@ -104,7 +104,7 @@
 },
  "CODE": {
       "description": "Input you country code here without + eg 254, it Will be used to Eliminate foreigners from the group once prompted.",
-      "value": "254",
+      "value": "255",
       "required": true
 },
  "SESSION": {
